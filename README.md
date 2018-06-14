@@ -21,5 +21,28 @@ docker run --name dbserver -d -p 3306:3306 marival-db:latest
 
 ## Modelo de datos
 
+<p align="center">
+    <img src="https://raw.githubusercontent.com/captaincode0/marival-test/master/data-model.jpg" alt="modelo de datos">
+</p>
 
+El modelo de datos se compone de las siguientes entidades:
 
+1. Usuarios: Son los administradores del sistema que pueden ejecutar operaciones en el sistema.
+2. Session: Son las
+
+## API REST
+
+**Endpoint:** /api/auth
+
+Ruta|Mètodo|Descripción
+--|--|--
+login|POST|autentica a un usuario en la aplicación siempre y cuando sus credenciales sean correctas.
+logout|PUT|termina la sesión de un usuario en la aplicación.
+
+**Endpoint:** /api/auth/sessions
+
+Ruta|Método|Descripción
+--|--|--
+/|GET|Obtiene todas las sesiones del usuario actual.
+
+**Endpoint:** /api/
